@@ -3,18 +3,15 @@ package main
 import "fmt"
 
 func main() {
+	//arrays
+	var a = [5]int{1, 34, 56, 78, 98}
+	for i := 1; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
 
-	var a [5]int
-	fmt.Println("emp:", a)
-
-	a[4] = 100
 	fmt.Println("set:", a)
+	a[4] = 100
 	fmt.Println("get:", a[4])
-
-	fmt.Println("len:", len(a))
-
-	b := [5]int{1, 2, 3, 4, 5}
-	fmt.Println("dcl:", b)
 
 	var twoD [2][3]int
 	for i := 0; i < 2; i++ {
@@ -23,4 +20,12 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
+
+	//slices
+
+	var numbers = []int{2, 5, 7}
+	fmt.Println(numbers)
+	numbers = append(numbers, 23)
+	fmt.Print(numbers)
+
 }
